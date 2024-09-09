@@ -56,16 +56,6 @@ const columns: GridColDef[] = [
 const Products = () => {
   const [open, setOpen] = useState(false)
 
-  // TEST THE API
-
-  // const { isLoading, data } = useQuery({
-  //   queryKey: ["allproducts"],
-  //   queryFn: () =>
-  //     fetch("http://localhost:8800/api/products").then(
-  //       (res) => res.json()
-  //     ),
-  // });
-
   return (
     <div className='products'>
       <div className='info'>
@@ -73,13 +63,7 @@ const Products = () => {
         <button onClick={() => setOpen(true)}>Add New Products</button>
       </div>
       <DataTable slug='products' columns={columns} rows={products} />
-      {/* TEST THE API */}
 
-      {/* {isLoading ? (
-        "Loading..."
-      ) : (
-        <DataTable slug="products" columns={columns} rows={data} />
-      )} */}
       {open && <Add slug='product' columns={columns} setOpen={setOpen} />}
     </div>
   )

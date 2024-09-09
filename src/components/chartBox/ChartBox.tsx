@@ -27,7 +27,6 @@ const ChartBox = (props: Props) => {
       </div>
       <div className='chartInfo'>
         <div className='chart'>
-          {/* https://recharts.org/en-US/examples/SimpleLineChart */}
           <ResponsiveContainer width='99%' height='100%'>
             <LineChart data={props.chartData}>
               <Tooltip
